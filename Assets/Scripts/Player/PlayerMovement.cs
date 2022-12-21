@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public float straightSpeed = 7;
     public float sideSpeed = 6;
+    public float jumpHeight = 10.0f;
+    public GameObject player;
+    public GameObject charModel;
 
     void Update()
     {
@@ -18,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.Translate(Vector3.left * Time.deltaTime * sideSpeed);
             }
         }
-        if (Input.GetKey(KeyCode.D) || Input. GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (this.gameObject.transform.position.x < LevelBoundary.rightSide)
             {

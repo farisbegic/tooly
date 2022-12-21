@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Distance : MonoBehaviour
 {
     public GameObject distanceDisplay;
+    public GameObject distanceEndDisplay;
     public int distanceRun;
     public bool addingDistance = false;
 
@@ -22,6 +23,7 @@ public class Distance : MonoBehaviour
     {
         distanceRun++;
         distanceDisplay.GetComponent<Text>().text = "" + distanceRun;
+        distanceEndDisplay.GetComponent<Text>().text = "" + distanceRun;
         yield return new WaitForSeconds(0.25f);
         addingDistance = false;
     }
