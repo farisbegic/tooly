@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float straightSpeed = 7;
     public float sideSpeed = 6;
-    public float jumpHeight = 10.0f;
     public GameObject player;
     public GameObject charModel;
 

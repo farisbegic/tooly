@@ -6,7 +6,7 @@ using UnityEngine;
 public class GenerateLevel : MonoBehaviour
 {
     public GameObject[] section;
-    public int zPosition = 49;
+    public int zPosition = 50;
     public bool creatingSection = false;
     public int secNum;
 
@@ -24,7 +24,7 @@ public class GenerateLevel : MonoBehaviour
     {
         secNum = UnityEngine.Random.Range(0, 3);
         Instantiate(section[secNum], new Vector3(0, 0, zPosition), Quaternion.identity);
-        zPosition += 49;
+        zPosition += zPosition;
         yield return new WaitForSeconds(2);
         creatingSection = false;
     }
